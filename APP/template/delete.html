@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row">
+  <div class="col-sm-6 offset-3">
+    <h4 class="alert alert-info text-center">Your Data is Confirm Deleted</h4>
+    <form action="" method="post">
+      {% csrf_token %} {{form.as_p}}
+
+      <!-- Your form fields here -->
+      <input type="submit" class="btn btn-danger" value="Delete" />
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="{% url 'listView' %}" class="btn btn-dark">Back</a>
+    </form>
+  </div>
+</div>
+{% endblock content %}
